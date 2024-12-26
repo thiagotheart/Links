@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Links Landing Page
 
-## Getting Started
+A dynamic and mobile-friendly landing page for showcasing links to social profiles, portfolio, and contact information. Built with **Next.js**, this project demonstrates a clean, modern UI with performance optimizations.
 
-First, run the development server:
+![Screenshot of the Links Landing Page](public/screenshot.png) <!-- Replace with an actual screenshot -->
 
-```bash
+---
+
+## 🚀 Features
+
+- Responsive design optimized for mobile and desktop.
+- Dynamic profile/logo switching with smooth animations.
+- SEO-friendly metadata for social sharing and discoverability.
+- Optimized images and lazy loading for fast performance.
+- Accessible design with ARIA labels.
+- Easy customization for links and content.
+
+---
+
+## 🛠️ Technologies
+
+- **[Next.js](https://nextjs.org/):** Framework for React applications.
+- **[Tailwind CSS](https://tailwindcss.com/):** For styling.
+- **[React Icons](https://react-icons.github.io/react-icons/):** For scalable vector icons.
+- **[Vercel](https://vercel.com/):** Deployment and hosting.
+
+---
+
+## 📦 Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/links-landing-page.git
+Navigate into the project directory:
+bash
+Copy code
+cd links-landing-page
+Install dependencies:
+bash
+Copy code
+npm install
+Start the development server:
+bash
+Copy code
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🔧 Configuration
+Update your social links and profile information in Home.js:
+javascript
+Copy code
+const links = [
+  {
+    icon: <FaWhatsapp />,
+    title: "WhatsApp",
+    url: "https://wa.me/your-number",
+    aria: "Chat with me on WhatsApp",
+  },
+  // Add more links as needed
+];
+Replace placeholder images in the /public folder (profile.webp, logo.webp, bg.jpg).
+Update metadata in layout.js for SEO:
+javascript
+Copy code
+export const metadata = {
+  title: 'Thiago Lopes | Experience, Design, Explore!',
+  description: 'Explore the work of Thiago Lopes, blending design, technology, and adventure.',
+};
+🌐 Deployment
+This project is ready to be deployed on Vercel:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Link your GitHub repository to Vercel.
+Push your changes to the main branch.
+Vercel will automatically deploy your project.
+📈 Performance Optimizations
+Images are optimized using Next.js' Image component.
+Fonts are preloaded for faster rendering.
+Built-in support for lazy loading and dynamic imports.
+🖼️ Screenshots
+Mobile View
+<!-- Replace with an actual screenshot -->
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Desktop View
+<!-- Replace with an actual screenshot -->
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🤝 Contributing
+Contributions are welcome! Please fork the repository and create a pull request with your changes.
 
-## Learn More
+Fork the project.
+Create a feature branch:
+bash
+Copy code
+git checkout -b feature/new-feature
+Commit your changes:
+bash
+Copy code
+git commit -m "Add a new feature"
+Push to your branch:
+bash
+Copy code
+git push origin feature/new-feature
+Open a pull request.
+📄 License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-To learn more about Next.js, take a look at the following resources:
+📧 Contact
+Thiago Lopes - thiagolopes344@gmail.com
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Project Link: https://github.com/yourusername/links-landing-page
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+markdown
+Copy code
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### **Instructions for Use**
+1. Replace all `yourusername` occurrences with your GitHub username.
+2. Replace the screenshot placeholders (`public/screenshot.png`, `public/screenshot-mobile.png`, `public/screenshot-desktop.png`) with actual images from your project.
+3. Add your GitHub project link in the **Contact** section.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Let me know if you’d like additional help! 😊
