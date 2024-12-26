@@ -103,7 +103,7 @@ export default function Home() {
         <header className="header">
           <div className={`image-container ${isFlipping ? "flipping" : ""}`}>
             <Image
-              src={showProfile ? "/profile.jpg" : "/logo.jpg"}
+              src={showProfile ? "/profile.webp" : "/logo.webp"}
               alt={showProfile ? "Profile Photo" : "Logo"}
               width={100} // Reduced size by 20%
               height={100}
