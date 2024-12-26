@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import './globals.css';
+import '../styles/globals.css';
+import Image from "next/image";
 import {
   FaWhatsapp,
   FaInstagram,
@@ -35,7 +36,7 @@ export default function Home() {
   const links = [
     {
       icon: <FaWhatsapp />,
-      title: "Chat with me on WhatsApp!",
+      title: "WhatsApp",
       url: "https://wa.me/002389791877",
       aria: "Chat with me on WhatsApp",
     },
@@ -97,26 +98,27 @@ export default function Home() {
 
   return (
     <div className="app-container">
-      {/* Main Header */}
-      <header className="header">
-        <div className={`image-container ${isFlipping ? "flipping" : ""}`}>
-          <img
-            src={showProfile ? "/profile.jpg" : "/logo.jpg"}
-            alt={showProfile ? "Profile Photo" : "Logo"}
-            className="profile-logo"
-            loading="lazy"
-          />
-        </div>
-        <h1 className="title">Thiago Lopes</h1>
-        <p className="phrase">Experience, Design, Explore!</p>
-        <p className="description">
-          🌍 Designer | 💻 IT Technician | 🐠 Scuba Diver | ⛵ Skipper | 🚀 Entrepreneur
-        </p>
-      </header>
-
       {/* Scrollable Content */}
-      <main className="links-container">
-        <div className="scrollable-links">
+      <div className="scrollable-container">
+        <header className="header">
+          <div className={`image-container ${isFlipping ? "flipping" : ""}`}>
+            <Image
+              src={showProfile ? "/profile.jpg" : "/logo.jpg"}
+              alt={showProfile ? "Profile Photo" : "Logo"}
+              width={100} // Reduced size by 20%
+              height={100}
+              className="profile-logo"
+              priority
+            />
+          </div>
+          <h1 className="title">Thiago Lopes</h1>
+          <p className="phrase">Experience, Design, Explore!</p>
+          <p className="description">
+            🌍 Designer | 💻 IT Technician | 🐠 Scuba Diver | ⛵ Skipper | 🚀 Entrepreneur
+          </p>
+        </header>
+
+        <main className="links-container">
           {links.map((link, index) => (
             <a
               key={index}
@@ -131,8 +133,8 @@ export default function Home() {
               <span className="ellipsis">...</span>
             </a>
           ))}
-        </div>
-      </main>
+        </main>
+      </div>
     </div>
   );
 }

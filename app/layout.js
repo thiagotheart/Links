@@ -1,24 +1,29 @@
-import { Poppins } from 'next/font/google';
+import '../styles/globals.css'; // Correct path based on your directory structure
 
-// Configure the Poppins font
-const poppins = Poppins({
-  subsets: ['latin'], // Include Latin character subset
-  weight: ['400', '500', '600', '700'], // Specify font weights
-});
+export const metadata = {
+  metadataBase: new URL("https://thiagolopes.cv"), // Replace with your live domain
+  title: 'Thiago Lopes | Experience, Design, Explore!',
+  description: 'Explore the work of Thiago Lopes, blending design, technology, and adventure.',
+  openGraph: {
+    type: 'website',
+    url: 'https://thiagolopes.cv',
+    title: 'Thiago Lopes | Experience, Design, Explore!',
+    description: 'Explore the work of Thiago Lopes, blending design, technology, and adventure.',
+    images: '/profile.jpg',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Thiago Lopes | Experience, Design, Explore!',
+    description: 'Explore the work of Thiago Lopes, blending design, technology, and adventure.',
+    images: '/profile.jpg',
+  },
+};
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={poppins.className}>
-      <head>
-        {/* Meta Tags */}
-        <title>Thiago Lopes | Links</title>
-        <meta name="description" content="Connect with Thiago Lopes through my curated links." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </head>
-      <body className="bg-black text-white min-h-screen flex flex-col items-center">
-        {children}
-      </body>
+    <html lang="en">
+      <head />
+      <body>{children}</body>
     </html>
   );
 }
