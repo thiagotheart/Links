@@ -17,12 +17,19 @@ export const metadata = {
     description: 'Explore the work of Thiago Lopes, blending design, technology, and adventure.',
     images: '/profile.jpg',
   },
+  icons: {
+    icon: '/favicon.ico', // Path to your favicon (in public folder)
+    shortcut: '/favicon.ico', // Optional: For older browsers
+    apple: '/favicon.png', // Optional: For Apple devices
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head />
+      <head>
+        {/* Additional head elements (if needed) */}
+      </head>
       <body>{children}</body>
     </html>
   );
