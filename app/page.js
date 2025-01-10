@@ -37,7 +37,7 @@ export default function Home() {
     {
       icon: <FaWhatsapp />,
       title: "WhatsApp",
-      url: "https://wa.me/002389791877",
+      url: "https://wa.me/2389791877",
       aria: "Chat with me on WhatsApp",
     },
     {
